@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Families",
+        "description": "אחזור רשימה של כל המשפחות",
+        "method": "GET",
+        "url": "/families/getFamilies"
+    },
+    {
+        "name": "Cities",
+        "description": "אחזור רשימה של כל הערים",
+        "method": "GET",
+        "url": "/address/getAllCities"
+    },
+    {
+        "name": "StreetForCities",
+        "description": "אחזור רשימת רחובות לעיר",
+        "method": "GET",
+        "url": "/address/getStreets/{cityId}",
+        "params": [
+            {
+                "key": "cityId",
+                "value": "XXXXX"
+            }
+        ]
+    }
+]
