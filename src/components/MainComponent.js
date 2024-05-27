@@ -154,10 +154,11 @@ export default function MainComponent() {
                     </div>
                     <div className='response'>
                         <div><b>Response:</b></div>
-                        <textarea
+                        <textarea value={data ? JSON.stringify(data) : ""}
+                         disabled 
                             style={{ width: "100%", minHeight: "100%", height: "400px" }}
-                            defaultValue={data ? JSON.stringify(data) : null}
-                        />
+                        
+                       />
                     </div>
                 </div>
             </div>
