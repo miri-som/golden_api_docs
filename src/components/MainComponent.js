@@ -66,6 +66,10 @@ export default function MainComponent() {
         }
         // eslint-disable-next-line
     }, [presetsValue, serverValue])
+    useEffect(() => {
+        setServerValue(serverArray[0].value);
+        // eslint-disable-next-line
+    }, [])
     return (
         <div className='App' >
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexDirection: "row-reverse" }}>
