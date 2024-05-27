@@ -84,7 +84,6 @@ export default function MainComponent() {
                                 const selectedServer = serverArray.find(server => server.key === value);
                                 if (selectedServer) {
                                     setServerValue(selectedServer.value);
-                                    setData(null);
                                 }
                             } else {
                                 setServerValue("");
@@ -108,7 +107,6 @@ export default function MainComponent() {
                             onChange={(event, value) => {
                                 if (value) {
                                     setPresetsValue(value);
-                                    setData(null);
                                 } else {
                                     setPresetsValue(null);
                                 }
@@ -155,10 +153,10 @@ export default function MainComponent() {
                     <div className='response'>
                         <div><b>Response:</b></div>
                         <textarea value={data ? JSON.stringify(data) : ""}
-                         disabled 
+                            disabled
                             style={{ width: "100%", minHeight: "100%", height: "400px" }}
-                        
-                       />
+
+                        />
                     </div>
                 </div>
             </div>
