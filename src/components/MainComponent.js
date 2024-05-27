@@ -52,6 +52,7 @@ export default function MainComponent() {
             const selectedValue = presetsValue;
             const selectedData = jsonData.find(item => item.name === selectedValue);
             if (selectedData) {
+                setData(null);
                 setDescription(selectedData.description);
                 setMethodValue(selectedData.method);
                 setUrlValue(serverValue ? serverValue + '' + selectedData.url : "");
@@ -70,6 +71,7 @@ export default function MainComponent() {
         setServerValue(serverArray[0].value);
         // eslint-disable-next-line
     }, [])
+
     return (
         <div className='App' >
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexDirection: "row-reverse" }}>
@@ -82,6 +84,7 @@ export default function MainComponent() {
                                 const selectedServer = serverArray.find(server => server.key === value);
                                 if (selectedServer) {
                                     setServerValue(selectedServer.value);
+                                    setData(null);
                                 }
                             } else {
                                 setServerValue("");
@@ -105,6 +108,7 @@ export default function MainComponent() {
                             onChange={(event, value) => {
                                 if (value) {
                                     setPresetsValue(value);
+                                    setData(null);
                                 } else {
                                     setPresetsValue(null);
                                 }
